@@ -25,7 +25,7 @@ body {
 
 /*Conteiner*/
 .conteiner {
-  outline: 2px solid blueviolet;
+  /* outline: 2px solid blueviolet; */
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
@@ -187,15 +187,31 @@ body {
 
 /* Hero */
 .hero {
-  outline: 2px solid blueviolet;
+  /* outline: 2px solid blueviolet; */
   text-align: center;
+}
+
+.hero-bg {
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url('../images/Header-img.jpg');
+  background-color: #2f303a;
+  max-width: 1600px;
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero-title {
   margin-top: 0;
   margin-bottom: 30px;
 
   color: #ffffff;
-  background-color: var(--secondary-bg-color);
 
   font-weight: 900;
   font-size: 44px;
@@ -236,18 +252,55 @@ body {
   margin-right: 30px;
 }
 
-.priority-link {
+.priority .priority-item::before {
+  content: '';
   display: block;
+  height: 120px;
+  /* outline: 1px solid blueviolet; */
+
+  background-size: 70px 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f4fa;
   margin-bottom: 30px;
 }
+
+.icon-antenna::before {
+  background-image: url(../images/antenna-1.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/clock-1.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/diagram-1.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/astronaut-1.svg);
+}
+
+/* .priority-item:nth-child(1)::before {
+  background-image: url(../images/antenna-1.svg);
+}
+
+.priority-item:nth-child(2)::before {
+  background-image: url(../images/clock-1.svg);
+}
+
+.priority-item:nth-child(3)::before {
+  background-image: url(../images/diagram-1.svg);
+}
+
+.priority-item:nth-child(4)::before {
+  background-image: url(../images/astronaut-1.svg);
+} */
 
 .priority .priority-item:nth-child(4n) {
   margin-right: 0;
 }
 
-.priority-img {
-  display: block;
-}
 .priority .title {
   margin-top: 0;
   margin-bottom: 10px;
@@ -299,17 +352,10 @@ body {
 .our-team {
   background-color: var(--secondary-bg-color);
 }
-/* .our-team > .conteiner {
-  padding-top: 94px;
-  padding-bottom: 94px;
-} */
+
 .team {
   display: flex;
   flex-wrap: wrap;
-}
-
-.team-link {
-  display: block;
 }
 
 .team .team-item {
@@ -348,14 +394,14 @@ body {
   justify-content: space-around;
 }
 
-.team .link:hover,
-.team .link:focus {
-  color: var(--accent-color);
-}
-
-.team .link {
+.social-network .link {
   color: #757575;
   text-decoration: none;
+}
+
+.social-network .link:hover,
+.social-network .link:focus {
+  color: var(--accent-color);
 }
 
 /*Customers*/
@@ -453,7 +499,21 @@ body {
   justify-content: space-between;
 }
 
-.copy {
+.join .button-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.join .button-icon::after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  background-image: url(../images/icon-plane.png);
+  background-size: contain;
+}
+
+/* .copy {
   color: rgba(255, 255, 255, 0.4);
 
   margin-top: 0;
@@ -466,7 +526,7 @@ body {
   font-size: 12px;
   line-height: 2;
   text-align: center;
-}
+} */
 
 /*Portfolio*/
 /*Filter*/
