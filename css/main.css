@@ -185,6 +185,16 @@ body {
   color: var(--accent-color);
 }
 
+.icon-mail {
+  width: 16px;
+  height: 11.2px;
+}
+
+.icon-phone {
+  width: 10px;
+  height: 15px;
+}
+
 /* Hero */
 .hero {
   /* outline: 2px solid blueviolet; */
